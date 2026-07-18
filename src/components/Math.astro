@@ -1,0 +1,16 @@
+---
+import katex from "katex";
+
+interface Props {
+	tex: string;
+	display?: boolean;
+}
+
+const { tex, display = false } = Astro.props;
+
+// LaTeX arrives as a string prop, so MDX never parses its braces as JSX.
+// Rendered here at build time — no client JS. KaTeX stylesheet is global (Base.astro).
+const html = katex.renderToString(tex, { displayMode: display, throwOnError: false });
+---
+
+<Fragment set:html={html} />

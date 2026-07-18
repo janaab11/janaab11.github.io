@@ -1,0 +1,25 @@
+---
+const socialLinks: { name: string; link: string }[] = [
+	{ name: "github", link: "https://github.com/janaab11/" },
+	{ name: "linkedin", link: "https://www.linkedin.com/in/kumarmanas-nethil/" },
+	{ name: "twitter", link: "https://twitter.com/janaab_sth/" },
+];
+---
+
+<p>
+	Find me on{" "}
+	{
+		socialLinks.map(({ name, link }, i) => (
+			<Fragment>
+				{i > 0 && (
+					<span aria-hidden="true" class="text-muted">
+						{" · "}
+					</span>
+				)}
+				<a class="cactus-link" href={link} rel="noreferrer" target="_blank">
+					{name}
+				</a>
+			</Fragment>
+		))
+	}
+</p>

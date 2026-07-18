@@ -1,0 +1,19 @@
+---
+import SocialList from "@/components/SocialList.astro";
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "Notes on ML, math and people",
+	title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-12">about</h1>
+	<p class="mb-4">
+		I lie somewhere between a Data Scientist, Developer and Mathematics student. My ideal life
+		would have me building things that support a more open world, with occasional breaks for coffee
+		and blackboard mathematics.
+	</p>
+	<SocialList />
+</PageLayout>
