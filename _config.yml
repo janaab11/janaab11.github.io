@@ -1,6 +1,9 @@
 # general configuration
-url: https://janaab11.github.io
+url: https://manasmade.in
 baseurl: 
+
+title: "manas"
+description: "Notes on ML, math and people"
 
 # compass configuration
 compass:
@@ -17,10 +20,14 @@ compass:
   # if include_analytics is true, the content of the analytics.html include will
   # be added at the end of the <head> section. You can add your Google Analytics
   # Tracking Code to that file.
-  include_analytics: true
+  include_analytics: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
 
 # exclude
-exclude: ["CNAME", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
 # Dependencies
 markdown: kramdown
