@@ -64,6 +64,7 @@
 	html {
 		color-scheme: light dark;
 		accent-color: var(--color-accent);
+		background-color: var(--color-global-bg);
 		scrollbar-gutter: stable;
 
 		&[data-theme="light"] {
@@ -138,4 +139,9 @@
 	--tw-prose-links: var(--color-global-text);
 	--tw-prose-quotes: var(--color-quote);
 	--tw-prose-th-borders: #666;
+}
+
+/* more breathing room around blockquotes (e.g. a quoted poem) */
+.prose blockquote {
+	margin-block: 2.25em;
 }
